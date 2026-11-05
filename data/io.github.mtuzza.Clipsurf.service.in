@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=io.github.mtuzza.Clipsurf
+Exec=@bindir@/io.github.mtuzza.Clipsurf --gapplication-service
