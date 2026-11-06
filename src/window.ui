@@ -23,6 +23,8 @@
         <property name="content">
           <object class="GtkBox" id="mainBox">
             <property name="orientation">vertical</property>
+            <property name="halign">GTK_ALIGN_CENTER</property>
+            <property name="valign">GTK_ALIGN_CENTER</property>
             <child>
               <object class="GtkLabel" id="label">
                 <property name="label" translatable="yes">Welcome to Clipsurf!</property>
@@ -31,6 +33,7 @@
             <child>
               <object class="GtkButton" id="button">
                 <property name="label">Button</property>
+                <property name="margin-top">30</property>
               </object>
             </child>
           </object>

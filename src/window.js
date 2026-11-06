@@ -25,10 +25,22 @@ import Adw from 'gi://Adw';
 export const ClipsurfWindow = GObject.registerClass({
     GTypeName: 'ClipsurfWindow',
     Template: 'resource:///io/github/mtuzza/Clipsurf/window.ui',
-    InternalChildren: ['label'],
+    InternalChildren: ['label', 'button'],
 }, class ClipsurfWindow extends Adw.ApplicationWindow {
     constructor(application) {
         super({ application });
+
+        const button = this._button;
+
+        button.connect('clicked', changeLabel);
+
+        function changeLabel() {
+          if (button.label == 'Hello') {
+            button.label = 'World';
+          } else {
+            button.label = 'Hello';
+          }
+        }
     }
 });
 
